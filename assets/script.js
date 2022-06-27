@@ -63,7 +63,7 @@ setTimeout( () => {
   titulo3.style.display = 'none';
 
 
-  bgreloaded.style.height='300vh';
+  bgreloaded.style.height='230vh';
   bodyy.style.overflow='visible'
 
   rabbit.style.display = 'flex'
