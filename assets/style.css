@@ -7,7 +7,19 @@ body{
     display: none;
 }
 
+#texto1::after{
+    content: '|';
+    margin-left: 0px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+}
 #texto2::after{
+    content: '|';
+    margin-left: 0px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+}
+#texto3::after{
     content: '|';
     margin-left: 0px;
     opacity: 1;
@@ -38,6 +50,8 @@ body{
 
 .pills{
     width: 40vw;
+    margin-top: 100vh;
+    /* margin-top: 50vh; */
     display: none;
     justify-content: space-around;
 
@@ -62,10 +76,9 @@ body{
 #rabbit{
     display: none;
     opacity: 1;
-    height: 300px;
+    height: 700px;
     width: 40px;
     justify-content: space-between;
-
     position: relative;
     overflow: hidden;
 }
@@ -76,31 +89,45 @@ body{
     height: 25px;
     width: 15px;
     animation-name: animacao;
-    animation-duration: 10s;
+    animation-duration: 15s;
     animation-iteration-count: infinite;
 }
 
 
+
+
+
+
+
+
+
+
 @keyframes animacao {
-    10%{
-        opacity: 1;
-        transform: scale(1,1);
-        align-content: center;
-    }20%{
-        margin-top: 30vh;
-    }
-    100%{
-        opacity: 0;
-        
-    }
-    /* 60%{
-        opacity: 1;
-    }
-    100%{
+    0%{
         opacity: 0;
 
-    } */
-   
+    }10%{
+        
+       
+       
+        
+    }25%{
+        opacity: 1;
+        margin-top: 35vh;
+    }50%{
+        opacity: 0;
+        margin-top: 70vh;
+
+    }75%{
+        margin-top: 105vh;
+        opacity: 1;
+
+    }80%{
+        margin-top: 135vh;
+      
+        
+    }
+  
 }
 
 .rabbits:nth-child(1){

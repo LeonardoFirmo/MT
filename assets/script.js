@@ -63,7 +63,7 @@ setTimeout( () => {
   titulo3.style.display = 'none';
 
 
-  bgreloaded.style.height='230vh';
+  bgreloaded.style.height='250vh';
   bodyy.style.overflow='visible'
 
   rabbit.style.display = 'flex'
@@ -77,7 +77,7 @@ setTimeout( () => {
   rabbit.style.display = 'none'
   bodyy.style.overflow='hidden'
   
-},  16000);
+},  20000);
 
 
 
@@ -87,7 +87,7 @@ setTimeout( () => {
   pills.style.display = 'flex';
  
   
-},  17000);
+},  21000);
 
  
 // matrix entra ao clicar nas pills
