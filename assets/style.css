@@ -1,0 +1,158 @@
+body{
+   
+    overflow: hidden;
+}
+
+.canvas {
+    display: none;
+}
+
+#texto2::after{
+    content: '|';
+    margin-left: 0px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+}
+
+@keyframes pisca {
+    0%,100%{
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    
+}
+
+.reloaded{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color:#408a40;
+    width: 100vw;
+    height: 100vh;
+    font-family: monospace;
+}
+
+
+.pills{
+    width: 40vw;
+    display: none;
+    justify-content: space-around;
+
+}
+
+#red-pill{
+    background-color: #E53720;
+    border-radius:30px;
+    width: 150px;
+    height: 10vh;
+}
+
+#blue-pill{
+    background-color: #405AC9;
+    border-radius:30px;
+    width: 150px;
+    height: 10vh;
+}
+
+
+
+#rabbit{
+    display: none;
+    opacity: 1;
+    height: 300px;
+    width: 40px;
+    justify-content: space-between;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+.rabbits{ 
+    opacity: 0; 
+    height: 25px;
+    width: 15px;
+    animation-name: animacao;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes animacao {
+    10%{
+        opacity: 1;
+        transform: scale(1,1);
+        align-content: center;
+    }20%{
+        margin-top: 30vh;
+    }
+    100%{
+        opacity: 0;
+        
+    }
+    /* 60%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+
+    } */
+   
+}
+
+.rabbits:nth-child(1){
+
+}
+.rabbits:nth-child(2){
+    animation-delay: 1s;
+}
+
+.rabbits:nth-child(3){
+    animation-delay: 3s;
+}
+
+.rabbits:nth-child(4){
+    animation-delay: 6s;
+}
+
+
+
+
+@media (max-width:1000px) {
+    .pills{
+        width: 70vw;
+    }
+    
+}
+
+
+@media (max-width:700px) {
+    .pills{
+        width: 80vw;
+    }
+    
+}
+
+
+
+@media (max-width:400px) {
+
+
+
+    .pills{
+        width: 100vw;
+    }
+    #red-pill{
+        width: 20vh;
+        height: 10vh;
+    }
+    
+    #blue-pill{
+        width: 20vh;
+        height: 10vh;
+    }
+    
+}
