@@ -1,4 +1,6 @@
 
+
+
  const titulo = document.querySelector('#texto1');
  const titulo2 = document.querySelector('#texto2');
  const titulo3 = document.querySelector('#texto3');
@@ -10,8 +12,6 @@
  const bgreloaded = document.getElementById('bgreloaded');
  
  
-
-
  titulo2.style.display = 'none';
  titulo3.style.display = 'none';
  
@@ -19,8 +19,14 @@
 
 
 
-
+ 
 // Escreve o texto
+
+
+
+
+
+
 
   function typeWrite(elemento){
     const textoArray = elemento.innerHTML.split('');
@@ -38,10 +44,15 @@
   }
 
 
-
+ 
 
 //  texto1-entra
-typeWrite(titulo) 
+typeWrite(titulo) ;
+
+
+
+
+
 
 
 //  texto2-entra
@@ -77,7 +88,7 @@ setTimeout( () => {
   rabbit.style.display = 'none'
   bodyy.style.overflow='hidden'
   
-},  20000);
+},  15000);
 
 
 
@@ -87,7 +98,7 @@ setTimeout( () => {
   pills.style.display = 'flex';
  
   
-},  21000);
+},  15000);
 
  
 // matrix entra ao clicar nas pills
