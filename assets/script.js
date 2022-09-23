@@ -1,9 +1,4 @@
-
-
-
- const titulo = document.querySelector('#texto1');
- const titulo2 = document.querySelector('#texto2');
- const titulo3 = document.querySelector('#texto3');
+ const texto = document.querySelector('#texto1');
  const pills = document.querySelector('#pills');
  const bluePill = document.getElementById('blue-pill');
  const redPill = document.getElementById('red-pill');
@@ -11,9 +6,7 @@
  const bodyy = document.getElementById('body');
  const bgreloaded = document.getElementById('bgreloaded');
  
- 
- titulo2.style.display = 'none';
- titulo3.style.display = 'none';
+
  
 
 
@@ -24,20 +17,36 @@
 
 
 
+const frase1 = 'Acorde, Escolhido..'
+const frase2 = 'A Matrix pegou você..'
+const frase3 = 'Siga o coelho branco..'
+const newfrase = [...frase1,...frase2,...frase3]
+// console.log(newfrase.length);
 
+escreveTexto(newfrase)
+chamaCoelho()
 
+  
 
+  function escreveTexto (array=[]){
+    texto.innerHTML=''
 
-  function typeWrite(elemento){
-    const textoArray = elemento.innerHTML.split('');
-    elemento.innerHTML = ''
-
-    textoArray.forEach((letra, i) => {
+    array.forEach((letra,i)=>{
       
-        setTimeout(function() {
-            elemento.innerHTML += letra
-        }, 100 * i)
+      setTimeout(() => {
+        texto.innerHTML += letra
+
+        if(i === 18 || i === 39){
+          texto.innerHTML=''
+         
+        }else if(i === 61){
+          texto.style.display ='none'
+
+        }
         
+      }, i*180);
+     
+      
     })
 
 
@@ -46,49 +55,28 @@
 
  
 
-//  texto1-entra
-typeWrite(titulo) ;
+// //  coelho entra
+function animacaoCoelho(){
+   const chamaCoelho = setTimeout( () => {
+    bgreloaded.style.height='250vh';
+    bodyy.style.overflow='visible'
+    rabbit.style.display = 'flex'
+    
+    
+  },  12000);
+
+  const someCoelho = setTimeout( () => {
+    rabbit.style.display = 'none'
+    bodyy.style.overflow='hidden'
+    
+  },  15000);
+}
 
 
 
 
 
 
-
-//  texto2-entra
-setTimeout( () => {
-  titulo.style.display = 'none';
-  titulo2.style.display = 'flex';
-  typeWrite(titulo2)
-},  3000);
-
-//  texto3-entra
-setTimeout( () => {
-  titulo2.style.display = 'none';
-  titulo3.style.display = 'flex';
-  typeWrite(titulo3)
-},  7000);
-
-//  coelho entra
-setTimeout( () => {
-  titulo3.style.display = 'none';
-
-
-  bgreloaded.style.height='250vh';
-  bodyy.style.overflow='visible'
-
-  rabbit.style.display = 'flex'
-  
-  
-},  10000);
-
-
-// coelho saindo
-setTimeout( () => {
-  rabbit.style.display = 'none'
-  bodyy.style.overflow='hidden'
-  
-},  15000);
 
 
 

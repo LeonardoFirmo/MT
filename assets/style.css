@@ -51,11 +51,22 @@ body{
 .pills{
     width: 40vw;
     margin-top: 100vh;
-    /* margin-top: 50vh; */
     display: none;
     justify-content: space-around;
 
 }
+#red-pill:hover{
+    width: 160px;
+    height: 12vh;
+    border-radius:40px;
+}
+#blue-pill:hover{
+    width: 160px;
+    height: 12vh;
+    border-radius:40px;
+}
+    
+
 
 #red-pill{
     background-color: #E53720;
@@ -70,6 +81,7 @@ body{
     width: 150px;
     height: 10vh;
 }
+
 
 
 
